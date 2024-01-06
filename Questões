@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Administrativa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    select {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Área Administrativa</h1>
+    <form id="questionForm">
+      <label for="ano">Ano:</label>
+      <input type="text" id="ano" name="ano" required>
+
+      <label for="banca">Banca:</label>
+      <input type="text" id="banca" name="banca" required>
+
+      <label for="cargo">Cargo:</label>
+      <input type="text" id="cargo" name="cargo" required>
+
+      <label for="orgao">Órgão:</label>
+      <input type="text" id="orgao" name="orgao" required>
+
+      <label for="enunciado">Enunciado da Questão:</label>
+      <textarea id="enunciado" name="enunciado" rows="4" required></textarea>
+
+      <label for="alternativas">Alternativas:</label>
+      <input type="text" id="alternativaA" name="alternativaA" placeholder="Alternativa A" required>
+      <input type="text" id="alternativaB" name="alternativaB" placeholder="Alternativa B" required>
+      <input type="text" id="alternativaC" name="alternativaC" placeholder="Alternativa C" required>
+      <input type="text" id="alternativaD" name="alternativaD" placeholder="Alternativa D" required>
+      <input type="text" id="alternativaE" name="alternativaE" placeholder="Alternativa E" required>
+
+      <label for="gabarito">Gabarito:</label>
+      <select id="gabarito" name="gabarito" required>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+        <option value="E">E</option>
+      </select>
+
+      <label for="comentario">Comentário:</label>
+      <textarea id="comentario" name="comentario" rows="4" required></textarea>
+
+      <label for="nivel">Nível de Dificuldade:</label>
+      <select id="nivel" name="nivel" required>
+        <option value="Fácil">Fácil</option>
+        <option value="Médio">Médio</option>
+        <option value="Difícil">Difícil</option>
+      </select>
+
+      <input type="submit" value="Adicionar Questão">
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
